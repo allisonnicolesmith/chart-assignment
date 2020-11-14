@@ -1,0 +1,175 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-color: #36454f;
+    background-color: #F2F2F2;
+    font-family: "Open Sans";
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    font-weight: bold;
+    color: #04BF68;
+}
+
+h1 {
+    font-size: 10vw;
+    color: #F24405;
+    line-height: 100%;
+}
+
+h2 {
+    color: #0455BF;
+    font-style: italic;
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 100%;
+}
+
+h3 {
+    color: #36454f;
+    font-size: 1em;
+    line-height: 100%;
+}
+
+p {
+    text-align: justify;
+    margin: 0 auto;
+    line-height: 120%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+figure {
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+}
+
+figcaption {
+    font-size: 1em;
+}
+
+.cap {
+    font-size: .8em;
+}
+
+.source {
+    color: gray;
+}
+
+.main_img {
+    width: 100%;
+}
+
+#flex {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#flex .graph {
+    flex-basis: 70%;
+}
+
+#flex .caption {
+    flex-basis: 30%;
+    color: #36454f;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 120%;
+    font-size: 1em;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    h1 {
+        font-size: 5em;
+        color: #F24405;
+        line-height: 100%;
+    }
+
+    h2 {
+        color: #0455BF;
+        font-style: italic;
+        font-size: 2em;
+        font-weight: bold;
+        line-height: 100%;
+    }
+
+    #flex {
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #flex .graph {
+        flex-basis: 70%;
+    }
+
+    #flex .caption {
+        flex-basis: 30%;
+        color: #36454f;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 10px;
+        line-height: 120%;
+        font-size: 1em;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flexing {
+        flex-basis: 30%;
+        font-size: 1em;
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
